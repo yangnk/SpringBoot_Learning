@@ -59,4 +59,15 @@ public class UserController {
         return "success";
     }
 
+    @RequestMapping(value = "/test/{id}", method = RequestMethod.PUT)
+    public String putUser1(@PathVariable Long id, @ModelAttribute User user) {
+        User u = users.get(id);
+        u.setName(user.getName());
+        u.setAge(user.getAge());
+        users.put(id, u);
+        return "success";
+
+    }
+
+
 }
