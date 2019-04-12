@@ -1,61 +1,115 @@
-# Spring Boot基础教程
+#SpringBoot-Learning
 
-本项目内容为[《Spring Boot基础教程》](http://blog.didispace.com/Spring-Boot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)的程序样例。
+本项目内容为Spring Boot教程程序样例。
 
-**专题目标**：打造全网内容最全，比收费教程更好的Spring Boot免费教程！
+作者博客：http://blog.didispace.com
 
-**如何支持**：
-1. 关注我的公众号”**程序猿DD**“
-2. 点个`Star`并`Follow`我
-3. 把该仓库分享给更多的朋友
+- Spring Boot系列博文：http://blog.didispace.com/categories/Spring-Boot/
+- Spring Cloud系列博文：http://blog.didispace.com/tag/spring-cloud/
+- Spring Cloud中文社区：http://bbs.springcloud.com.cn/
 
-如果您对文字类教程不感冒或者想要通过综合案例学习Spring，那么给您推荐这个我觉得目前内容与价格最良心的视频课程：["玩转Spring全家桶"](https://time.geekbang.org/course/intro/156?code=d1se%2F7ugeBEyuU%2FIYp1ynYzzGDAKYLFWk96zyObvTyU%3D&utm_term=zeusEN8Q0&utm_source=git&utm_medium=chengxuyuandd&utm_campaign=156-onsell&utm_content=ddboke)
+如您觉得该项目对您有用，欢迎点击右上方的**Star**按钮，给予支持！！
 
-## 教程目录
+如有问题，可联系：didi@potatomato.club
 
-- [Spring Boot 1.x版本教程：1.x分支](../../tree/1.x)
-- [Spring Boot 2.x版本教程：2.x分支](../../tree/2.x)
+## 欢迎关注我的公众号
 
-> **关注公众号：“程序猿DD”**，领取我整理的免费学习资料。<br>
+![程序猿DD的公众号](http://git.oschina.net/uploads/images/2016/1221/000537_56c3b2f4_437188.jpeg "程序猿DD的公众号")
 
-## 特别赞助商
 
-<table>
-      <tbody>
-        <tr>
-          <td align="center" valign="middle">
-            <a href="https://e.coding.net/?utm_source=zhaiyongchao&utm_medium=banner&utm_campaign=march2019" target="_blank">
-              <img width="300" src="https://github.com/dyc87112/SpringBoot-Learning/blob/master/sponsor/git-springboot-sponsor-1-500X166.jpg?raw=true">
-            </a>
-          </td>
-          <td align="center" valign="middle">
-            <a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wxfqkr0o&utm_source=wxfqkr0o" target="_blank">
-              <img width="300" src="https://github.com/dyc87112/SpringBoot-Learning/blob/master/sponsor/git-springboot-sponsor-2-300x100.jpg?raw=true">
-            </a>
-          </td>     
-        </tr>
-      </tbody>
-</table>
+##样例列表
 
-> 如果您也想赞助支持并出现在上表中的话，可以通过邮件联系我：`didi@didispace.com`
+### 快速入门
 
-- [阿里云：ECS云服务器2折起](https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wxfqkr0o&utm_source=wxfqkr0o)
-- [腾讯云：轻松应对建站成本问题](https://cloud.tencent.com/redirect.php?redirect=1027&cps_key=f6a8af1297bfac40b9d10ffa1270029a&from=console)
+- chapter1：[基本项目构建（可作为工程脚手架），引入web模块，完成一个简单的RESTful API](http://blog.didispace.com/spring-boot-learning-1/)
 
-## 推荐内容
+### 工程配置
 
-- [我的博客](http://blog.didispace.com)：分享平时学习和实践过的技术内容
-- [知识星球](https://t.xiaomiquan.com/zfEiY3v)：聊聊技术人的斜杠生活
-- [GitHub](https://github.com/dyc87112/SpringBoot-Learning)：Star支持一下呗
-- [Gitee](https://gitee.com/didispace/SpringBoot-Learning)：Star支持一下呗
-- [Spring问答社区](http://www.spring4all.com/)：如果您有什么问题，可以去这里发帖
-- [Spring Boot基础教程](http://blog.didispace.com/Spring-Boot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)：全网Star最多的免费Spring Boot基础教程
-- [Spring Cloud基础教程](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)：全网最早最全的免费Spring Cloud基础教程
+- chapter2-1-1：[配置文件详解：自定义属性、随机数、多环境配置等](http://blog.didispace.com/springbootproperties/)
 
-## 我的公众号
+### Web开发
 
-<img src="http://blog.didispace.com/css/images/weixin.jpg" style="width:150px;height:150px;" />
+- chapter3-1-1：[构建一个较为复杂的RESTful API以及单元测试](http://blog.didispace.com/springbootrestfulapi/)
+- chapter3-1-2：[使用Thymeleaf模板引擎渲染web视图](http://blog.didispace.com/springbootweb/)
+- chapter3-1-3：[使用Freemarker模板引擎渲染web视图](http://blog.didispace.com/springbootweb/)
+- chapter3-1-4：[使用Velocity模板引擎渲染web视图](http://blog.didispace.com/springbootweb/)
+- chapter3-1-5：[使用Swagger2构建RESTful API](http://blog.didispace.com/springbootswagger2/)
+- chapter3-1-6：[统一异常处理](http://blog.didispace.com/springbootexception/)
 
-## 我出版的书
+### 数据访问
 
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0416/233656_dd3bce94_437188.png "在这里输入图片标题")
+- chapter3-2-1：[使用JdbcTemplate](http://blog.didispace.com/springbootdata1/)
+- chapter3-2-2：[使用Spring-data-jpa简化数据访问层（推荐）](http://blog.didispace.com/springbootdata2/)
+- chapter3-2-3：[多数据源配置（一）：JdbcTemplate](http://blog.didispace.com/springbootmultidatasource/)
+- chapter3-2-4：[多数据源配置（二）：Spring-data-jpa](http://blog.didispace.com/springbootmultidatasource/)
+- chapter3-2-5：[使用NoSQL数据库（一）：Redis](http://blog.didispace.com/springbootredis/)
+- chapter3-2-6：[使用NoSQL数据库（二）：MongoDB](http://blog.didispace.com/springbootmongodb/)
+- chapter3-2-7：[整合MyBatis](http://blog.didispace.com/springbootmybatis/)
+- chapter3-2-8：[MyBatis注解配置详解](http://blog.didispace.com/mybatisinfo/)
+
+### 事务管理
+
+- chapter3-3-1：[使用事务管理](http://blog.didispace.com/springboottransactional/)
+- chapter3-3-2：[分布式事务（未完成）]
+
+### 其他内容
+- chapter4-1-1：[使用@Scheduled创建定时任务](http://blog.didispace.com/springbootscheduled/)
+- chapter4-1-2：[使用@Async实现异步调用](http://blog.didispace.com/springbootasync/)
+
+#### 日志管理
+
+- chapter4-2-1：[默认日志的配置](http://blog.didispace.com/springbootlog/)
+- chapter4-2-2：[使用log4j记录日志](http://blog.didispace.com/springbootlog4j/)
+- chapter4-2-3：[对log4j进行多环境不同日志级别的控制](http://blog.didispace.com/springbootlog4jmuilt/)
+- chapter4-2-4：[使用AOP统一处理Web请求日志](http://blog.didispace.com/springbootaoplog/)
+- chapter4-2-5：[使用log4j记录日志到MongoDB](http://blog.didispace.com/springbootlog4jmongodb/)
+
+#### 安全管理
+
+- chapter4-3-1：[使用Spring Security](http://blog.didispace.com/springbootsecurity/)
+- chapter4-3-2：[使用Spring Session（未完成）]
+
+#### 缓存支持
+
+- chapter4-4-1：[注解配置与EhCache使用](http://blog.didispace.com/springbootcache1/)
+- chapter4-4-2：[使用Redis做集中式缓存](http://blog.didispace.com/springbootcache2/)
+
+#### 邮件发送
+
+- chapter4-5-1：[实现邮件发送：简单邮件、附件邮件、嵌入资源的邮件、模板邮件](http://blog.didispace.com/springbootmailsender/)
+
+### 消息服务
+
+- chapter5-1-1：[JMS（未完成）]
+- chapter5-2-1：[Spring Boot中使用RabbitMQ](http://blog.didispace.com/spring-boot-rabbitmq/)
+
+### 其他功能
+
+- chapter6-1-1：[使用Spring StateMachine框架实现状态机](http://blog.didispace.com/spring-statemachine/)
+
+### Dubbo进行服务治理
+
+- chapter9-2-1：[Spring Boot中使用Dubbo进行服务治理]
+- chapter9-2-2：[Spring Boot与Dubbo中管理服务依赖]
+
+### Spring Cloud构建微服务架构
+
+由于Spring Cloud偏宏观架构，Spring Boot偏微观细节，内容上越来越多，为了两部分内容不互相干扰，所以迁移Spring Cloud内容到：[SpringCloud-Learning项目](http://git.oschina.net/didispace/SpringCloud-Learning)，该项目将不再更新Spring Cloud内容，关注Spring Cloud内容的请移步至[SpringCloud-Learning项目](http://git.oschina.net/didispace/SpringCloud-Learning)
+
+- chapter9-1-1：[Spring Cloud构建微服务架构（一）服务注册与发现](http://blog.didispace.com/springcloud1/)
+- chapter9-1-2：[Spring Cloud构建微服务架构（二）服务消费者](http://blog.didispace.com/springcloud2/)
+- chapter9-1-3：[Spring Cloud构建微服务架构（三）断路器](http://blog.didispace.com/springcloud3/)
+- chapter9-1-4：[Spring Cloud构建微服务架构（四）分布式配置中心](http://blog.didispace.com/springcloud4/)
+- chapter9-1-5：[Spring Cloud构建微服务架构（五）服务网关](http://blog.didispace.com/springcloud5/)
+- chapter9-1-6：[Spring Cloud构建微服务架构（六）集群监控]
+
+
+## 教程整理地址（时间不足，暂缓更新）
+
+http://blog.didispace.com/book/springboot/
+
+## 打赏支持
+
+<img src="http://git.oschina.net/uploads/images/2016/0717/085831_64f0a21e_437188.png" width="200px" height="200px;" /> <img src="http://git.oschina.net/uploads/images/2016/0717/085620_78f6b3cb_437188.png" width="200px" height="200px;" />
+
+
