@@ -9,4 +9,7 @@ package com.didispace.test;/**
  * @Version:
  */
 public class MyTest {
+    public static void main(String[] args) {
+
+    }
 }
