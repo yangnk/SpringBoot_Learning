@@ -1,8 +1,8 @@
-package com.yangnk.emailProducer.common;
+package com.yangnk.emailMQ.common;
 
 import com.alibaba.fastjson.JSONObject;
 import com.rabbitmq.client.Channel;
-import com.yangnk.emailProducer.model.MailMessageModel;
+import com.yangnk.emailMQ.model.MailMessageModel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.beans.factory.annotation.Value;

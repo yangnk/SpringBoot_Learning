@@ -1,4 +1,4 @@
-package com.yangnk.emailProducer.service;
+package com.yangnk.emailMQ.service;
 
 /**
  * ${DESCRIPTION}
@@ -7,6 +7,7 @@ package com.yangnk.emailProducer.service;
  * @create 2019-04-25 下午6:03
  **/
 public interface EmailService {
+
     /**
      * 发送邮件
      * @param message

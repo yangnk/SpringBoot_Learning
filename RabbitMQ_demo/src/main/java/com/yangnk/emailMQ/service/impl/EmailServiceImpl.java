@@ -1,4 +1,4 @@
-package com.yangnk.emailProducer.service.impl;
+package com.yangnk.emailMQ.service.impl;
 
 /**
  * ${DESCRIPTION}
@@ -6,13 +6,14 @@ package com.yangnk.emailProducer.service.impl;
  * @author yangningkai
  * @create 2019-04-25 下午5:09
  **/
-import com.yangnk.emailProducer.service.EmailService;
+import com.yangnk.emailMQ.service.EmailService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+
 @Service
 @Slf4j
 public class EmailServiceImpl implements EmailService {

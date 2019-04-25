@@ -1,4 +1,4 @@
-package com.yangnk.emailProducer;
+package com.yangnk.emailMQ;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"com.yangnk.emailProducer"})
+@ComponentScan(basePackages = {"com.yangnk.emailMQ"})
 @SpringBootApplication
-public class EmailProducerApplication {
+public class EmailRobbitMQApplication {
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(EmailProducerApplication.class, args);
+        SpringApplication.run(EmailRobbitMQApplication.class, args);
     }
 }

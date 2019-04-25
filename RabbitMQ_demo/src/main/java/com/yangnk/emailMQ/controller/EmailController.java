@@ -1,4 +1,4 @@
-package com.yangnk.emailProducer.controller;
+package com.yangnk.emailMQ.controller;
 
 /**
  * ${DESCRIPTION}
@@ -8,12 +8,11 @@ package com.yangnk.emailProducer.controller;
  **/
 
 import com.alibaba.fastjson.JSONObject;
-import com.yangnk.emailProducer.service.EmailService;
+import com.yangnk.emailMQ.service.EmailService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.annotation.Resource;
 
 @RestController()
@@ -22,8 +21,12 @@ public class EmailController {
 
     @Resource
     private EmailService emailService;
+
     /**
-     * 新增方法
+     * 测试接口
+     * @param jsonObject
+     * @return
+     * @throws Exception
      */
     @RequestMapping(method = RequestMethod.POST)
     public JSONObject add(@RequestBody JSONObject jsonObject) throws Exception {

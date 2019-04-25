@@ -1,6 +1,6 @@
-package com.yangnk.emailProducer.config;
+package com.yangnk.emailMQ.config;
 
-import com.yangnk.emailProducer.common.MailMessageListenerAdapter;
+import com.yangnk.emailMQ.common.MailMessageListenerAdapter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
@@ -23,7 +23,7 @@ import com.rabbitmq.client.ConnectionFactory;
  * @create 2019-04-25 下午6:31
  **/
 @Configuration
-@ComponentScan(basePackages = {"com.yangnk.emailProducer"})
+@ComponentScan(basePackages = {"com.yangnk.emailMQ"})
 @PropertySource(value = {"classpath:application.properties"})
 public class RabbitMQConfig {
     @Autowired

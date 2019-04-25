@@ -1,4 +1,4 @@
-package com.yangnk.emailProducer.model;
+package com.yangnk.emailMQ.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;

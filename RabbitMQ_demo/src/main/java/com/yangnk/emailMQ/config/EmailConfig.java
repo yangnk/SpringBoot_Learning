@@ -1,4 +1,4 @@
-package com.yangnk.emailProducer.config;
+package com.yangnk.emailMQ.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +19,7 @@ import java.util.Properties;
  **/
 @Configuration
 @PropertySource(value = {"classpath:mail.properties"})
-@ComponentScan(basePackages = {"com.yangnk.emailProducer"})
+@ComponentScan(basePackages = {"com.yangnk.emailMQ"})
 public class EmailConfig {
     @Autowired
     private Environment env;
