@@ -11,6 +11,7 @@
         <module>Hibernate_validator_demo</module>
         <module>demo</module>
         <module>RabbitMQ_demo</module>
+        <module>emailSender</module>
     </modules>
     <build>
         <plugins>
