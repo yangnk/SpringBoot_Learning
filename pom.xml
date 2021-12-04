@@ -5,13 +5,14 @@
 
     <groupId>com.yangnk</groupId>
     <artifactId>SpringBoot-Learning</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>Hibernate_validator_demo</module>
-        <module>demo</module>
         <module>RabbitMQ_demo</module>
         <module>emailSender</module>
+        <module>springBootDemo</module>
     </modules>
     <build>
         <plugins>
