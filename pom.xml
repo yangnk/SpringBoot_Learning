@@ -10,7 +10,7 @@
 
     <modules>
         <module>Hibernate_validator_demo</module>
-        <module>RabbitMQ_demo</module>
+        <module>RabbitMQDemo</module>
         <module>emailSender</module>
         <module>springBootDemo</module>
     </modules>

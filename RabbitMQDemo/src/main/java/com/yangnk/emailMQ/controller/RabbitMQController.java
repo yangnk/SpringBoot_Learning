@@ -9,18 +9,21 @@ package com.yangnk.emailMQ.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.yangnk.emailMQ.service.EmailService;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.yangnk.emailMQ.service.impl.SmsServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
 import javax.annotation.Resource;
 
 @RestController()
 @RequestMapping(value = "/emails")
-public class EmailController {
+public class RabbitMQController {
 
     @Resource
     private EmailService emailService;
+
+    @Autowired
+    private SmsServiceImpl smsService;
 
     /**
      * 测试接口
@@ -39,5 +42,16 @@ public class EmailController {
          */
         emailService.sendEmail(jsonObject.toJSONString());
         return jsonObject;
+    }
+
+    /**
+     * 测试接口
+     * @param
+     * @return
+     * @throws Exception
+     */
+    @GetMapping("/sms")
+    public void addSms(@RequestParam("sms") String sms) throws Exception {
+        smsService.sendSms(sms);
     }
 }
