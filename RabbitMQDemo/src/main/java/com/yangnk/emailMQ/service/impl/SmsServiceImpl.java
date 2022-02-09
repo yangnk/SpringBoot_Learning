@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RabbitListener(queues = "sms_queue")
 public class SmsServiceImpl implements SmsService{
+    @Override
     @RabbitHandler
     public void sendSms(String sms)
     {
