@@ -12,7 +12,6 @@ public class Receiver {
 
     @RabbitHandler
     public void process(String hello) {
-        log.info("-------------->>receive:{}<<--------------", hello);
+        log.info("==============receive:{}===================", hello);
     }
-
 }

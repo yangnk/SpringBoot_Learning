@@ -35,7 +35,7 @@ public class SmsServiceImpl implements SmsService{
            * 您也可以直接在代码中写入密钥对，但需谨防泄露，不要将代码复制、上传或者分享给他人
            * CAM 密钥查询：https://console.cloud.tencent.com/cam/capi
            */
-            Credential cred = new Credential("AKIDb0B6k8E4dz4tSlnY2FAoBKHzTijU0GG1", "ZtxmLgkKhoeEXZMuDG4cuxlJcfW8UaQ1");
+            Credential cred = new Credential("xxx", "xxx");
 //            // 实例化一个 http 选项，可选，无特殊需求时可以跳过
 //            HttpProfile httpProfile = new HttpProfile();
 //            // 设置代理
@@ -72,17 +72,17 @@ public class SmsServiceImpl implements SmsService{
            * 短信控制台：https://console.cloud.tencent.com/smsv2
            * sms helper：https://cloud.tencent.com/document/product/382/3773 */
            /* 短信应用 ID: 在 [短信控制台] 添加应用后生成的实际 SDKAppID，例如1400006666 */
-            String appid = "1400626654";
+            String appid = "xxx";
             req.setSmsSdkAppid(appid);
            /* 短信签名内容: 使用 UTF-8 编码，必须填写已审核通过的签名，可登录 [短信控制台] 查看签名信息 */
             String sign = "余杭塘河边的儿童大王HZ";
             req.setSign(sign);
            /* 模板 ID: 必须填写已审核通过的模板 ID，可登录 [短信控制台] 查看模板 ID */
-            String templateID = "1290138";
+            String templateID = "xxx";
             req.setTemplateID(templateID);
            /* 下发手机号码，采用 e.164 标准，+[国家或地区码][手机号]
            * 例如+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号，最多不要超过200个手机号*/
-            String[] phoneNumbers = {"+8617858844150"};
+            String[] phoneNumbers = {"+xxx"};
             req.setPhoneNumberSet(phoneNumbers);
            /* 模板参数: 若无模板参数，则设置为空*/
             String[] templateParams = {sms};

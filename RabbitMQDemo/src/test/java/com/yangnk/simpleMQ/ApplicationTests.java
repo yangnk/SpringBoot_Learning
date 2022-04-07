@@ -18,7 +18,7 @@ public class ApplicationTests {
     private Receiver helloReceiver;
 
     @Test
-    public void hello() throws Exception {
+    public void send() throws Exception {
         while (true) {
             helloSender.send();
         }
