@@ -12,3 +12,8 @@ logs
 target
 *.iml
 .idea
+Hibernate_validator_demo/src/main/resources/rebel.xml
+emailSender/src/main/resources/rebel.xml
+emailSender/src/main/resources/static/
+spring-boot-rabbitmq/pom.xml
+spring-boot-rabbitmq/src/
