@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>Hibernate_validator_demo</module>
+        <module>HibernateValidatorDemo</module>
         <module>RabbitMQDemo</module>
         <module>emailSender</module>
         <module>springBootDemo</module>
