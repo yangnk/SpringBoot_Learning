@@ -19,3 +19,4 @@ spring-boot-rabbitmq/pom.xml
 spring-boot-rabbitmq/src/
 /.gitignore
 /testIgn
+!/testIgn
