@@ -18,3 +18,5 @@ emailSender/target/test-classes/
 
 /README-YNK.md
 SpringBootDemo/src/main/resources/static/
+/readme-ynk.md
+/.gitignore
