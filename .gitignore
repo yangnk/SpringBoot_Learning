@@ -14,3 +14,5 @@ emailSender/target/generated-test-sources/
 emailSender/emailSender.iml
 emailSender/target/classes/
 emailSender/target/test-classes/
+/RabbitMQDemo/README_YNK.md
+
