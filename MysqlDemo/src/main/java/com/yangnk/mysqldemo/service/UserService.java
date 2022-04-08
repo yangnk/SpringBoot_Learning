@@ -1,7 +1,7 @@
 package com.yangnk.mysqldemo.service;
 
 import com.yangnk.mysqldemo.entity.User;
-import com.yangnk.mysqldemo.mapper.UserMapper;
+import com.yangnk.mysqldemo.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +18,14 @@ public class UserService {
 
     public void getUserMapper() {
         User user = userMapper.selectByPrimaryKey(1);
+        System.out.println("==========================");
+        System.out.println(user.toString());
+        System.out.println("==========================");
+    }
+
+    public void setUserMapper() {
+        User user = new User(2, "b");
+        userMapper.insert(user);
         System.out.println("==========================");
         System.out.println(user.toString());
         System.out.println("==========================");

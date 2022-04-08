@@ -1,8 +1,6 @@
 package com.yangnk.mysqldemo.service;
 
 import org.junit.Test;
-import org.junit.Before; 
-import org.junit.After;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,8 +19,14 @@ public class UserServiceTest {
     @Autowired
     UserService userService;
 
-@Test
-public void testGetUserMapper() throws Exception {
-    userService.getUserMapper();
-}
+    @Test
+    public void testGetUserMapper() throws Exception {
+        userService.getUserMapper();
+    }
+
+    @Test
+    public void testSetUserMapper() throws Exception {
+        userService.setUserMapper();
+    }
+
 } 

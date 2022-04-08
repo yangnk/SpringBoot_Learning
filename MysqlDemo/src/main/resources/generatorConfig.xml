@@ -13,9 +13,9 @@
 
         <javaModelGenerator targetPackage="com.yangnk.mysqldemo.entity" targetProject="src/main/java"></javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources"></sqlMapGenerator>
+        <sqlMapGenerator targetPackage="mybatis.mapper"  targetProject="src/main/resources"></sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.yangnk.mysqldemo.mapper" targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
+        <javaClientGenerator targetPackage="com.yangnk.mysqldemo.dao" targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
 
         <table tableName="User">
             <property name="modelOnly" value="false"/>
