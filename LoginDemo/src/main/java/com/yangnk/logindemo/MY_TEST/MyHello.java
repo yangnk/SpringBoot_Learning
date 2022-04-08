@@ -1,4 +1,4 @@
-package com.yangnk.logindemo.myTest;
+package com.yangnk.logindemo.MY_TEST;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
