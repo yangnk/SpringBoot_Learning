@@ -12,7 +12,7 @@
         <module>HibernateValidatorDemo</module>
         <module>RabbitMQDemo</module>
         <module>springBootDemo</module>
-        <module>MysqlDemo</module>
+        <module>MybatisDemo</module>
         <module>LoginDemo</module>
     </modules>
     <build>

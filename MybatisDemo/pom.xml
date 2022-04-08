@@ -79,7 +79,7 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.2</version>
                 <configuration>
-                    <configurationFile>../MysqlDemo/src/main/resources/generatorConfig.xml</configurationFile>
+                    <configurationFile>/src/main/resources/generatorConfig.xml</configurationFile>
 
                     <overwrite>true</overwrite>
                 </configuration>
