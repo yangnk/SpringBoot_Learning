@@ -1,7 +1,6 @@
 package com.yangnk.logindemo.service;
 
 import com.yangnk.logindemo.entity.User;
-import org.springframework.stereotype.Service;
 
 /**
  * ${DESCRIPTION}
@@ -10,11 +9,12 @@ import org.springframework.stereotype.Service;
  * @create 2022-04-08 15:34
  **/
 public interface UserService {
-    public User getUser(String userName);
+    User getUser(String userName);
 
     /**
-     * 向redis中存验证码，时效5min
-     * @param smsCode
+     * 将用户请求的验证码发送到用户手机，并且存入到有失效时长的redis中
+     * @param userName
+     * @param telephone
      */
-    public void setRedisSmsCode(String smsCode);
+    void sendSmsCode(String userName, String telephone);
 }

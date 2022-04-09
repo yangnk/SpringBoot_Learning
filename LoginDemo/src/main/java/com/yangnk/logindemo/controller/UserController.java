@@ -29,4 +29,17 @@ public class UserController {
         logger.info("===login user is:{}===",user.toString());
         return user.toString();
     }
+
+    @RequestMapping(value = "/smsCode", method = RequestMethod.POST)
+    public String sendSmsCode(@RequestHeader(value = "username") String userName,
+                              @RequestHeader(value = "telephone") String telephone) {
+
+        userService.sendSmsCode(userName, telephone);
+
+
+//        User user = userService.getUser(userName);
+//        logger.info("===login user is:{}===",user.toString());
+//        return user.toString();
+        return null;
+    }
 }
