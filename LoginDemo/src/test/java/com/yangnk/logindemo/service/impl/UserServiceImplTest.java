@@ -38,10 +38,10 @@ public class UserServiceImplTest {
     @Test
     public void testSendSms() throws Exception {
 //        userService.getUser("aaa");
-        while (true) {
+//        while (true) {
 
-            smsService.sendSmsCode("123456");
-        }
+            smsService.sendSmsCode("111111");
+//        }
     }
 
 } 
