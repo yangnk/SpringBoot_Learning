@@ -14,6 +14,9 @@
         <module>springBootDemo</module>
         <module>MybatisDemo</module>
         <module>LoginDemo</module>
+        <module>KafkaDemo</module>
+        <module>JpaDemo</module>
+        <module>RedisDemo</module>
     </modules>
     <build>
         <plugins>
