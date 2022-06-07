@@ -1,4 +1,4 @@
-package com.yangnk.redisDemo.myTest;
+package com.yangnk.redisDemo.TEST_MY;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
