@@ -20,6 +20,11 @@ import java.util.Set;
 //java + redis zset实现延迟队列（定时到期执行任务）
 //https://blog.csdn.net/liaomingwu/article/details/123069700
 
+//    设计思路：
+//            利用redis的zset可以按照score排序的特性来实现延迟队列。
+//            需要一个添加任务的线程，一个监听zset中任务是否过期的线程。其中添加任务的线程将任务和时间添加到zset中，其中时间为目前时间+延时时间。
+//            另一方面监听线程轮训zset中的数据，按照目前时间取出zset中的值，这样就会取出过期时间的任务，之后再讲该任务删除，用以实现延期任务的效果。
+
 public class RedisDelayQueue {
 
     public static void main(String[] args) {
