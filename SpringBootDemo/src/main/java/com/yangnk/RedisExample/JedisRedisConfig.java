@@ -33,7 +33,7 @@ public class JedisRedisConfig {
     private String host;
     @Value("${spring.redis.port}")
     private int port;
-//    @Value("${spring.redis.password}")
+    //    @Value("${spring.redis.password}")
 //    private String password;
     @Value("${spring.redis.timeout}")
     private int timeout;
@@ -73,8 +73,7 @@ public class JedisRedisConfig {
      */
     @Bean(name = "JedisConnectionFactory")
     public JedisConnectionFactory jedisConnectionFactory(JedisPoolConfig jedisPoolConfig) {
-        JedisClientConfiguration jedisClientConfiguration = JedisClientConfiguration.builder().usePooling()
-                .poolConfig(jedisPoolConfig).and().readTimeout(Duration.ofMillis(timeout)).build();
+        JedisClientConfiguration jedisClientConfiguration = JedisClientConfiguration.builder().usePooling().poolConfig(jedisPoolConfig).and().readTimeout(Duration.ofMillis(timeout)).build();
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
         redisStandaloneConfiguration.setHostName(host);
         redisStandaloneConfiguration.setPort(port);

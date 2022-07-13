@@ -58,12 +58,10 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public SimpleMessageListenerContainer listenerContainer(
-            @Qualifier("hfnMessageListenerAdapter") HfnMessageListenerAdapter hfnMessageListenerAdapter) throws Exception {
+    public SimpleMessageListenerContainer listenerContainer(@Qualifier("hfnMessageListenerAdapter") HfnMessageListenerAdapter hfnMessageListenerAdapter) throws Exception {
         String queueName = env.getProperty("mq.queue").trim();
 
-        SimpleMessageListenerContainer simpleMessageListenerContainer =
-                new SimpleMessageListenerContainer(cachingConnectionFactory());
+        SimpleMessageListenerContainer simpleMessageListenerContainer = new SimpleMessageListenerContainer(cachingConnectionFactory());
         simpleMessageListenerContainer.setQueueNames(queueName);
         simpleMessageListenerContainer.setMessageListener(hfnMessageListenerAdapter);
         // 设置手动 ACK
@@ -82,25 +80,21 @@ public class RabbitMQConfig {
     Queue queue() {
         String name = env.getProperty("mq.queue").trim();
         // 是否持久化
-        boolean durable = StringUtils.isNotBlank(env.getProperty("mq.queue.durable").trim())?
-                Boolean.valueOf(env.getProperty("mq.queue.durable").trim()) : true;
+        boolean durable = StringUtils.isNotBlank(env.getProperty("mq.queue.durable").trim()) ? Boolean.valueOf(env.getProperty("mq.queue.durable").trim()) : true;
         // 仅创建者可以使用的私有队列，断开后自动删除
-        boolean exclusive = StringUtils.isNotBlank(env.getProperty("mq.queue.exclusive").trim())?
-                Boolean.valueOf(env.getProperty("mq.queue.exclusive").trim()) : false;
+        boolean exclusive = StringUtils.isNotBlank(env.getProperty("mq.queue.exclusive").trim()) ? Boolean.valueOf(env.getProperty("mq.queue.exclusive").trim()) : false;
         // 当所有消费客户端连接断开后，是否自动删除队列
-        boolean autoDelete = StringUtils.isNotBlank(env.getProperty("mq.queue.autoDelete").trim())?
-                Boolean.valueOf(env.getProperty("mq.queue.autoDelete").trim()) : false;
+        boolean autoDelete = StringUtils.isNotBlank(env.getProperty("mq.queue.autoDelete").trim()) ? Boolean.valueOf(env.getProperty("mq.queue.autoDelete").trim()) : false;
         return new Queue(name, durable, exclusive, autoDelete);
     }
+
     @Bean
     TopicExchange exchange() {
         String name = env.getProperty("mq.exchange").trim();
         // 是否持久化
-        boolean durable = StringUtils.isNotBlank(env.getProperty("mq.exchange.durable").trim())?
-                Boolean.valueOf(env.getProperty("mq.exchange.durable").trim()) : true;
+        boolean durable = StringUtils.isNotBlank(env.getProperty("mq.exchange.durable").trim()) ? Boolean.valueOf(env.getProperty("mq.exchange.durable").trim()) : true;
         // 当所有消费客户端连接断开后，是否自动删除队列
-        boolean autoDelete = StringUtils.isNotBlank(env.getProperty("mq.exchange.autoDelete").trim())?
-                Boolean.valueOf(env.getProperty("mq.exchange.autoDelete").trim()) : false;
+        boolean autoDelete = StringUtils.isNotBlank(env.getProperty("mq.exchange.autoDelete").trim()) ? Boolean.valueOf(env.getProperty("mq.exchange.autoDelete").trim()) : false;
         return new TopicExchange(name, durable, autoDelete);
     }
 

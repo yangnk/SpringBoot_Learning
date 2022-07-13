@@ -28,6 +28,7 @@ public class NetworkService {
 
     /**
      * 根据id查找network网络信息
+     *
      * @param id
      * @return
      */
@@ -39,22 +40,24 @@ public class NetworkService {
 
     /**
      * 将network网络数据添加到mysql和redis中
+     *
      * @param network
      */
     public void addNetwork(Network network) {
         //添加到mysql数据库中
         int result = networkMapper.insert(network);
-        log.info("=====addNetwork into mysql:{}=====",network.toString());
+        log.info("=====addNetwork into mysql:{}=====", network.toString());
         //添加到缓存数据库redis中
         if (result > 0) {
             Jedis jedis = jedisPool.getResource();
             redisUtils.setValue(jedis, network.getId().toString(), network.getNetwork());
-            log.info("=====addNetwork into redis:{}=====",network.toString());
+            log.info("=====addNetwork into redis:{}=====", network.toString());
         }
     }
 
     /**
      * 根据id查询网络信息，先查redis，redis没有再查询mysql
+     *
      * @param id
      */
     public String selectNetwork(String id) {

@@ -17,18 +17,10 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.yangnk.logindemo.controller"))
-                .paths(PathSelectors.any())
-                .build();
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("com.yangnk.logindemo.controller")).paths(PathSelectors.any()).build();
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .description("API 1.0 操作文档")
-                .version("1.0")
-                .build();
+        return new ApiInfoBuilder().description("API 1.0 操作文档").version("1.0").build();
     }
 }

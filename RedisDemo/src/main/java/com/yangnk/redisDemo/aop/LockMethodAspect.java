@@ -30,7 +30,7 @@ public class LockMethodAspect {
     JedisPool jedisPool;
 
     @Around("@annotation(com.yangnk.redisDemo.annotation.RedisLock)")
-    public Object around(ProceedingJoinPoint joinPoint){
+    public Object around(ProceedingJoinPoint joinPoint) {
         log.info("LockMethodAspect.around()");
         //获取加注解的方法
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
@@ -51,7 +51,7 @@ public class LockMethodAspect {
             return joinPoint.proceed();
         } catch (Throwable throwable) {
             throw new RuntimeException("系统异常");
-        }finally {
+        } finally {
             jedis.close();
         }
     }

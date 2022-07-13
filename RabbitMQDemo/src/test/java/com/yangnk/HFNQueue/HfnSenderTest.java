@@ -2,7 +2,7 @@ package com.yangnk.HFNQueue;
 
 import com.yangnk.HFNQueue.common.HfnSender;
 import org.junit.Test;
-import org.junit.Before; 
+import org.junit.Before;
 import org.junit.After;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

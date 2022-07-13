@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.yangnk.redisDemo.dao")
 public class RedisdemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(RedisdemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(RedisdemoApplication.class, args);
+    }
 
 }

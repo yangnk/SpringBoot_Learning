@@ -18,7 +18,7 @@ import javax.validation.Valid;
 public class SaveAccountController {
 
     @PostMapping("/saveAccount")
-    public Object saveAccount(@RequestBody @Valid Account account){
+    public Object saveAccount(@RequestBody @Valid Account account) {
 //        this.saveAccount(account);
         System.out.println("");
         return "保存成功";

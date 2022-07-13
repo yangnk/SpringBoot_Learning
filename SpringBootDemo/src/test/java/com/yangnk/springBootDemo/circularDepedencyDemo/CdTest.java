@@ -7,7 +7,7 @@
 // * @create 2022-03-04 22:29
 // **/
 //
-//import org.junit.Test;
+//import org.junit.ThreadPoolTest;
 //import org.junit.runner.RunWith;
 //import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.test.context.ContextConfiguration;
@@ -24,7 +24,7 @@
 //@SpringBootTest
 //public class CdTest {
 //
-//    @Test
+//    @ThreadPoolTest
 //    public void testSendSms() {
 ////        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(LazyConfig.class);
 //    }

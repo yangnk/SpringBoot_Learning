@@ -33,7 +33,6 @@ public class Network implements Serializable {
      * This method returns the value of the database column network.id
      *
      * @return the value of network.id
-     *
      * @mbggenerated Tue Jun 07 10:09:49 CST 2022
      */
     public Integer getId() {
@@ -45,7 +44,6 @@ public class Network implements Serializable {
      * This method sets the value of the database column network.id
      *
      * @param id the value for network.id
-     *
      * @mbggenerated Tue Jun 07 10:09:49 CST 2022
      */
     public void setId(Integer id) {
@@ -57,7 +55,6 @@ public class Network implements Serializable {
      * This method returns the value of the database column network.network
      *
      * @return the value of network.network
-     *
      * @mbggenerated Tue Jun 07 10:09:49 CST 2022
      */
     public String getNetwork() {
@@ -69,7 +66,6 @@ public class Network implements Serializable {
      * This method sets the value of the database column network.network
      *
      * @param network the value for network.network
-     *
      * @mbggenerated Tue Jun 07 10:09:49 CST 2022
      */
     public void setNetwork(String network) {

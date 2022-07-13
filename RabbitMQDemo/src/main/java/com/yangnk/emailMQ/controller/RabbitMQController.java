@@ -27,6 +27,7 @@ public class RabbitMQController {
 
     /**
      * 测试接口
+     *
      * @param jsonObject
      * @return
      * @throws Exception
@@ -46,6 +47,7 @@ public class RabbitMQController {
 
     /**
      * 测试接口
+     *
      * @param
      * @return
      * @throws Exception

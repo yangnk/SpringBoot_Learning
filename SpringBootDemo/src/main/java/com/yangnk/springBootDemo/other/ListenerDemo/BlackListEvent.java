@@ -20,7 +20,8 @@ public class BlackListEvent extends ApplicationEvent {
     }
 
     public String addr;
-    public BlackListEvent(Object source,String addr) {
+
+    public BlackListEvent(Object source, String addr) {
         super(source);
         this.addr = addr;
     }

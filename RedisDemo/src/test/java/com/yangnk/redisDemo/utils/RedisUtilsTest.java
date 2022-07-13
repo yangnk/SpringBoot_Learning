@@ -8,13 +8,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-/** 
-* RedisLockUtils Tester. 
-* 
-* @author <Authors name> 
-* @since <pre>五月 13, 2022</pre> 
-* @version 1.0 
-*/
+/**
+ * RedisLockUtils Tester.
+ *
+ * @author <Authors name>
+ * @version 1.0
+ * @since <pre>五月 13, 2022</pre>
+ */
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class RedisUtilsTest {

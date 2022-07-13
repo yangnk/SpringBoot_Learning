@@ -19,7 +19,7 @@ import java.nio.file.Files;
 public class TestController {
 
     @RequestMapping("/helloa")
-    public String sayHello(String string){
+    public String sayHello(String string) {
         System.out.println("helloa");
         System.out.println(string);
         return "helloa";

@@ -2,7 +2,9 @@ package com.yangnk.redisDemo.dao;
 
 import com.yangnk.redisDemo.entity.Network;
 import com.yangnk.redisDemo.entity.NetworkExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface NetworkMapper {

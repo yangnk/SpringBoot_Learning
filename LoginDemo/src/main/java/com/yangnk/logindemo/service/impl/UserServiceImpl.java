@@ -55,6 +55,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 向redis中存验证码，时效5min
+     *
      * @param userName
      * @param smsCode
      */
@@ -79,6 +80,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 根据用户名获取redis动态验证码
+     *
      * @param userName
      * @return
      */

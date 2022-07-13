@@ -16,7 +16,6 @@ public class Test0609 {
     public final static void main(String[] args) throws Exception {
 
 
-
         HttpClient httpclient = new DefaultHttpClient();
 
         try {
@@ -36,7 +35,6 @@ public class Test0609 {
             System.out.println(responseBody);
 
             System.out.println("----------------------------------------");
-
 
 
         } finally {

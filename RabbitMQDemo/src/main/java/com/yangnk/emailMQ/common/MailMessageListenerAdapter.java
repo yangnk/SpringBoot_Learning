@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
+
 import javax.annotation.Resource;
 import javax.mail.internet.MimeMessage;
 
@@ -34,19 +35,20 @@ public class MailMessageListenerAdapter extends MessageListenerAdapter {
             String messageBody = new String(message.getBody());
             MailMessageModel mailMessageModel = JSONObject.toJavaObject(JSONObject.parseObject(messageBody), MailMessageModel.class);
             // 发送邮件
-            String to =  mailMessageModel.getTo();
+            String to = mailMessageModel.getTo();
             String subject = mailMessageModel.getSubject();
             String text = mailMessageModel.getText();
             sendHtmlMail(to, subject, text);
             // 手动ACK
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     /**
      * 发送邮件
+     *
      * @param to
      * @param subject
      * @param text

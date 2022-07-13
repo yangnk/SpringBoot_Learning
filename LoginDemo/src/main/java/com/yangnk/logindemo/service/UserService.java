@@ -14,6 +14,7 @@ public interface UserService {
 
     /**
      * 将用户请求的验证码发送到用户手机，并且存入到有失效时长的redis中
+     *
      * @param userName
      * @param telephone
      */
@@ -21,6 +22,7 @@ public interface UserService {
 
     /**
      * 根据用户名查询手机验证码（smsCode）
+     *
      * @param userName
      * @return
      */
@@ -28,6 +30,7 @@ public interface UserService {
 
     /**
      * 保存用户信息
+     *
      * @param userVO
      */
     void saveUserInfo(UserVO userVO);

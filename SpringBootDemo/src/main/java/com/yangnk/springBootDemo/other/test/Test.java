@@ -17,7 +17,7 @@
 // * @create 2022-01-25 19:42
 // **/
 //@Component
-//public class Test implements InitializingBean, DisposableBean, BeanNameAware,BeanFactoryAware {
+//public class ThreadPoolTest implements InitializingBean, DisposableBean, BeanNameAware,BeanFactoryAware {
 //
 //
 //    //1、bean实例的处理

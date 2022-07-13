@@ -15,8 +15,11 @@ import java.util.concurrent.TimeUnit;
 @Inherited
 public @interface RedisLock {
     String key();
+
     int expire() default 5;
+
     long waitTime() default Long.MIN_VALUE;
+
     TimeUnit timeUnit() default TimeUnit.SECONDS;
 
 }

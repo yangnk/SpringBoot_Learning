@@ -9,8 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 @MapperScan("com.yangnk.mysqldemo.dao")
 public class MysqlDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MysqlDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MysqlDemoApplication.class, args);
+    }
 
 }

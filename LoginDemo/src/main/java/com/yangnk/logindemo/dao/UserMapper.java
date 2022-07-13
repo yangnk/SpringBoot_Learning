@@ -2,7 +2,9 @@ package com.yangnk.logindemo.dao;
 
 import com.yangnk.logindemo.entity.User;
 import com.yangnk.logindemo.entity.UserExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {

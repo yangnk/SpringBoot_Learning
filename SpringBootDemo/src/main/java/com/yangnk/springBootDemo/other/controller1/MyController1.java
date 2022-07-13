@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController1 {
 
     @RequestMapping("/hello1")
-    public String sayHello(String string){
+    public String sayHello(String string) {
         System.out.println("hello1");
         System.out.println(string);
         return "hello1";

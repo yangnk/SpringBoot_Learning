@@ -40,7 +40,7 @@ public class UserServiceImplTest {
 //        userService.getUser("aaa");
 //        while (true) {
 
-            smsService.sendSmsCode("111111");
+        smsService.sendSmsCode("111111");
 //        }
     }
 

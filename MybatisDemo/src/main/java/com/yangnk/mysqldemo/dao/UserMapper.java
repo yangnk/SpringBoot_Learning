@@ -2,7 +2,9 @@ package com.yangnk.mysqldemo.dao;
 
 import com.yangnk.mysqldemo.entity.User;
 import com.yangnk.mysqldemo.entity.UserExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 

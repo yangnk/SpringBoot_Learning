@@ -37,56 +37,57 @@ public class ResponseEntity<T> implements Serializable {
         this.data = data;
     }
 
-    private ResponseEntity(int status){
+    private ResponseEntity(int status) {
         this.status = status;
     }
-    private ResponseEntity(int status, T data){
+
+    private ResponseEntity(int status, T data) {
         this.status = status;
         this.data = data;
     }
 
-    private ResponseEntity(int status, String msg, T data){
+    private ResponseEntity(int status, String msg, T data) {
         this.status = status;
         this.msg = msg;
         this.data = data;
     }
 
-    private ResponseEntity(int status, String msg){
+    private ResponseEntity(int status, String msg) {
         this.status = status;
         this.msg = msg;
     }
 
-    public boolean isSuccess(){
+    public boolean isSuccess() {
         return this.status == ResponseCode.SUCCESS.getCode();
     }
 
-    public static <T> ResponseEntity<T> createBySuccess(){
+    public static <T> ResponseEntity<T> createBySuccess() {
         return new ResponseEntity<T>(ResponseCode.SUCCESS.getCode());
     }
 
-    public static <T> ResponseEntity<T> createBySuccessMessage(String msg){
-        return new ResponseEntity<T>(ResponseCode.SUCCESS.getCode(),msg);
+    public static <T> ResponseEntity<T> createBySuccessMessage(String msg) {
+        return new ResponseEntity<T>(ResponseCode.SUCCESS.getCode(), msg);
     }
 
-    public static <T> ResponseEntity<T> createBySuccess(T data){
-        return new ResponseEntity<T>(ResponseCode.SUCCESS.getCode(),data);
+    public static <T> ResponseEntity<T> createBySuccess(T data) {
+        return new ResponseEntity<T>(ResponseCode.SUCCESS.getCode(), data);
     }
 
-    public static <T> ResponseEntity<T> createBySuccess(String msg, T data){
-        return new ResponseEntity<T>(ResponseCode.SUCCESS.getCode(),msg,data);
-    }
-
-
-    public static <T> ResponseEntity<T> createByError(){
-        return new ResponseEntity<T>(ResponseCode.ERROR.getCode(),ResponseCode.ERROR.getDesc());
+    public static <T> ResponseEntity<T> createBySuccess(String msg, T data) {
+        return new ResponseEntity<T>(ResponseCode.SUCCESS.getCode(), msg, data);
     }
 
 
-    public static <T> ResponseEntity<T> createByErrorMessage(String errorMessage){
-        return new ResponseEntity<T>(ResponseCode.ERROR.getCode(),errorMessage);
+    public static <T> ResponseEntity<T> createByError() {
+        return new ResponseEntity<T>(ResponseCode.ERROR.getCode(), ResponseCode.ERROR.getDesc());
     }
 
-    public static <T> ResponseEntity<T> createByErrorCodeMessage(int errorCode, String errorMessage){
-        return new ResponseEntity<T>(errorCode,errorMessage);
+
+    public static <T> ResponseEntity<T> createByErrorMessage(String errorMessage) {
+        return new ResponseEntity<T>(ResponseCode.ERROR.getCode(), errorMessage);
+    }
+
+    public static <T> ResponseEntity<T> createByErrorCodeMessage(int errorCode, String errorMessage) {
+        return new ResponseEntity<T>(errorCode, errorMessage);
     }
 }

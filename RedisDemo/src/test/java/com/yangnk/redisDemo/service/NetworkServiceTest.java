@@ -2,20 +2,20 @@ package com.yangnk.redisDemo.service;
 
 import com.yangnk.redisDemo.entity.Network;
 import org.junit.Test;
-import org.junit.Before; 
+import org.junit.Before;
 import org.junit.After;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-/** 
-* NetworkService Tester. 
-* 
-* @author <Authors name> 
-* @since <pre>六月 7, 2022</pre> 
-* @version 1.0 
-*/
+/**
+ * NetworkService Tester.
+ *
+ * @author <Authors name>
+ * @version 1.0
+ * @since <pre>六月 7, 2022</pre>
+ */
 
 
 @RunWith(SpringRunner.class)

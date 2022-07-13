@@ -48,7 +48,6 @@ public class User implements Serializable {
      * This method returns the value of the database column user.id
      *
      * @return the value of user.id
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public Integer getId() {
@@ -60,7 +59,6 @@ public class User implements Serializable {
      * This method sets the value of the database column user.id
      *
      * @param id the value for user.id
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public void setId(Integer id) {
@@ -72,7 +70,6 @@ public class User implements Serializable {
      * This method returns the value of the database column user.user_name
      *
      * @return the value of user.user_name
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public String getUserName() {
@@ -84,7 +81,6 @@ public class User implements Serializable {
      * This method sets the value of the database column user.user_name
      *
      * @param userName the value for user.user_name
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public void setUserName(String userName) {
@@ -96,7 +92,6 @@ public class User implements Serializable {
      * This method returns the value of the database column user.password
      *
      * @return the value of user.password
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public String getPassword() {
@@ -108,7 +103,6 @@ public class User implements Serializable {
      * This method sets the value of the database column user.password
      *
      * @param password the value for user.password
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public void setPassword(String password) {
@@ -120,7 +114,6 @@ public class User implements Serializable {
      * This method returns the value of the database column user.sex
      *
      * @return the value of user.sex
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public String getSex() {
@@ -132,7 +125,6 @@ public class User implements Serializable {
      * This method sets the value of the database column user.sex
      *
      * @param sex the value for user.sex
-     *
      * @mbggenerated Fri Apr 08 15:31:53 CST 2022
      */
     public void setSex(String sex) {

@@ -37,18 +37,23 @@ public class UserEntity implements Serializable {
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getUserName() {
         return userName;
     }
+
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
     public String getUserSex() {
         return userSex;
     }
+
     public void setUserSex(String userSex) {
         this.userSex = userSex;
     }

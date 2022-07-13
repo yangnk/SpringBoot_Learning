@@ -27,7 +27,9 @@ public class User implements Serializable {
      */
     private static final long serialVersionUID = 1L;
 
-    public User() {}
+    public User() {
+    }
+
     public User(Integer id, String name) {
         this.id = id;
         this.name = name;
@@ -39,7 +41,6 @@ public class User implements Serializable {
      * This method returns the value of the database column User.id
      *
      * @return the value of User.id
-     *
      * @mbggenerated Thu Apr 07 22:47:47 CST 2022
      */
     public Integer getId() {
@@ -51,7 +52,6 @@ public class User implements Serializable {
      * This method sets the value of the database column User.id
      *
      * @param id the value for User.id
-     *
      * @mbggenerated Thu Apr 07 22:47:47 CST 2022
      */
     public void setId(Integer id) {
@@ -63,7 +63,6 @@ public class User implements Serializable {
      * This method returns the value of the database column User.name
      *
      * @return the value of User.name
-     *
      * @mbggenerated Thu Apr 07 22:47:47 CST 2022
      */
     public String getName() {
@@ -75,7 +74,6 @@ public class User implements Serializable {
      * This method sets the value of the database column User.name
      *
      * @param name the value for User.name
-     *
      * @mbggenerated Thu Apr 07 22:47:47 CST 2022
      */
     public void setName(String name) {

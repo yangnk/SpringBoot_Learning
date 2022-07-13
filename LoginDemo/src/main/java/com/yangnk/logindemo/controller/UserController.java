@@ -42,8 +42,7 @@ public class UserController {
 
     @ApiOperation("/发送动态码")
     @RequestMapping(value = "/smscode", method = RequestMethod.POST)
-    public ResponseEntity sendSmsCode(@RequestHeader(value = "username") String userName,
-                                      @RequestHeader(value = "telephone") String telephone) {
+    public ResponseEntity sendSmsCode(@RequestHeader(value = "username") String userName, @RequestHeader(value = "telephone") String telephone) {
         userService.sendSmsCode(userName, telephone);
         logger.info("===success send smsCode.===");
         return ResponseEntity.createBySuccessMessage("send sms success");
@@ -51,14 +50,14 @@ public class UserController {
 
     @ApiOperation("/注册用户")
     @RequestMapping(value = "/registryUserAccount", method = RequestMethod.PUT)
-    public ResponseEntity registryUserAccount(@RequestBody UserVO userVO,
-                                       @RequestHeader(value = "userSmsCode") String userSmsCode) {
+    public ResponseEntity registryUserAccount(@RequestBody UserVO userVO, @RequestHeader(value = "userSmsCode") String userSmsCode) {
         String smsCode = userService.getSmsCode(userVO.getUserName());
         //判断填写验证码是否正确
         if (StringUtils.isEmpty(smsCode) || (!smsCode.equals(userSmsCode))) {
             //失败
             return ResponseEntity.createByErrorMessage("smsCode is wrong.");
-        } {
+        }
+        {
             //正确将注册的用户信息存库
             userService.saveUserInfo(userVO);
             return ResponseEntity.createBySuccessMessage("registry user success.");

@@ -19,7 +19,7 @@ public class MyController1 {
     ApplicationContext applicationContext;
 
     @RequestMapping("/hello1")
-    public String sayHello(){
+    public String sayHello() {
         BlackListEvent blackListEvent = new BlackListEvent(this, "hangzhou");
         applicationContext.publishEvent(blackListEvent);
         System.out.println("hello1");

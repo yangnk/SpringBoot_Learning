@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
 import kafka.producer.KeyedMessage;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
@@ -47,16 +48,15 @@ public class HelloWorldProducer {
             String msg = runtime + ",www.example.com," + ip;
             System.out.println(msg);
             ProducerRecord<String, String> data = new ProducerRecord<String, String>(topic, ip, msg);
-            producer.send(data,
-                    new Callback() {
-                        public void onCompletion(RecordMetadata metadata, Exception e) {
-                            if(e != null) {
-                                e.printStackTrace();
-                            } else {
-                                System.out.println("The offset of the record we just sent is: " + metadata.offset());
-                            }
-                        }
-                    });
+            producer.send(data, new Callback() {
+                public void onCompletion(RecordMetadata metadata, Exception e) {
+                    if (e != null) {
+                        e.printStackTrace();
+                    } else {
+                        System.out.println("The offset of the record we just sent is: " + metadata.offset());
+                    }
+                }
+            });
         }
         System.out.println("send message done");
         producer.close();

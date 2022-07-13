@@ -14,6 +14,7 @@ public class RedisUtils {
 
     /**
      * 获取redis中的值
+     *
      * @param jedis
      * @param key
      * @return
@@ -25,6 +26,7 @@ public class RedisUtils {
 
     /**
      * 给redis设值
+     *
      * @param jedis
      * @param key
      * @param value
@@ -42,6 +44,7 @@ public class RedisUtils {
 
     /**
      * 删除redis中的值
+     *
      * @param jedis
      * @param key
      * @return

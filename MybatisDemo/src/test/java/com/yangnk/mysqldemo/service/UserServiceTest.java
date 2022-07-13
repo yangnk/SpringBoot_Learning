@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-/** 
-* UserService Tester. 
-* 
-* @author <Authors name> 
-* @since <pre>四月 7, 2022</pre> 
-* @version 1.0 
-*/
+/**
+ * UserService Tester.
+ *
+ * @author <Authors name>
+ * @version 1.0
+ * @since <pre>四月 7, 2022</pre>
+ */
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class UserServiceTest {

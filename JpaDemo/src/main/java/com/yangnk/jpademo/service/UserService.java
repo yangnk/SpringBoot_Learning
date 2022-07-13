@@ -22,7 +22,7 @@ public class UserService {
         List<User> userList = userRepository.selectUser();
         for (User item : userList) {
             System.out.println(item.toString());
-            
+
         }
         return userList;
     }

@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = { Room.class })
+@ContextConfiguration(classes = {Room.class})
 @SpringBootTest
 public class Test0429aTest {
 

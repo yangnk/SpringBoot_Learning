@@ -107,7 +107,7 @@ public class RedisDelayQueue {
         @Override
         public void run() {
 
-            Jedis jedis = new Jedis("127.0.0.1",6379);
+            Jedis jedis = new Jedis("127.0.0.1", 6379);
 
             while (true) {
 
@@ -119,8 +119,7 @@ public class RedisDelayQueue {
                 Set<Tuple> myzset = jedis.zrangeWithScores("myzset", 0, 1);
 
                 // 如果读取记录为空
-                if(myzset.isEmpty())
-                {
+                if (myzset.isEmpty()) {
                     // 延时1秒
                     try {
                         Thread.sleep(1000);
@@ -132,15 +131,13 @@ public class RedisDelayQueue {
 
                 Iterator<Tuple> iterator = myzset.iterator();
 
-                while (iterator.hasNext())
-                {
+                while (iterator.hasNext()) {
                     Tuple tuple = iterator.next();
                     String item = tuple.getElement();
                     Double score = tuple.getScore();
 
                     // 如果当前记录到期
-                    if(timestamp >= score)
-                    {
+                    if (timestamp >= score) {
                         long lscore = score.longValue();
 
                         // 执行业务处理
@@ -150,9 +147,7 @@ public class RedisDelayQueue {
                         jedis.zrem("myzset", item);
 
                         // 继续循环读取下一条
-                    }
-                    else
-                    {
+                    } else {
                         // 最小记录未到期，延时1秒
                         try {
                             Thread.sleep(1000);

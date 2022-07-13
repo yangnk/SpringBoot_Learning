@@ -9,7 +9,7 @@ import org.springframework.lang.Nullable;
  * @author yangningkai
  * @create 2022-04-29 16:26
  **/
-public class HelloFactoryBean implements FactoryBean<Test0429a>{
+public class HelloFactoryBean implements FactoryBean<Test0429a> {
     @Nullable
     @Override
     public Test0429a getObject() throws Exception {

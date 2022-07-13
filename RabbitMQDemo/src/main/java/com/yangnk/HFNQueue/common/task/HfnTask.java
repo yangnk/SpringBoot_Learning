@@ -14,7 +14,7 @@ import java.util.concurrent.Callable;
  * @create 2022-05-08 15:58
  **/
 @Slf4j
-public class HfnTask implements Callable<String>{
+public class HfnTask implements Callable<String> {
     ExperimentInfo experimentInfo;
 
     public HfnTask(ExperimentInfo experimentInfo) {

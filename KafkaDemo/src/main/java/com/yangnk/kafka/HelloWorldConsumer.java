@@ -2,6 +2,7 @@ package com.yangnk.kafka;
 
 import java.util.Arrays;
 import java.util.Properties;
+
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -22,7 +23,7 @@ public class HelloWorldConsumer {
         Properties props = new Properties();
 
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.0.0.1:2181");
-        props.put(ConsumerConfig.GROUP_ID_CONFIG ,"test_topic_group") ;
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "test_topic_group");
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
         props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);

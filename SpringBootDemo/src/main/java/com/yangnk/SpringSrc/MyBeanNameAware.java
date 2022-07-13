@@ -8,7 +8,7 @@ import org.springframework.beans.factory.BeanNameAware;
  * @author yangningkai
  * @create 2022-04-29 16:39
  **/
-public class MyBeanNameAware implements BeanNameAware{
+public class MyBeanNameAware implements BeanNameAware {
     @Override
     public void setBeanName(String s) {
 //        s = "test";

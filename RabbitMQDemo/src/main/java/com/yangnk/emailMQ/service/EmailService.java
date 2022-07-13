@@ -10,6 +10,7 @@ public interface EmailService {
 
     /**
      * 发送邮件
+     *
      * @param message
      * @throws Exception
      */
