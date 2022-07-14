@@ -25,4 +25,10 @@ public class HfnController {
         hfnService.send(experimentInfo);
         return "success";
     }
+
+    @RequestMapping(value = "/myhello", method = RequestMethod.GET)
+    public String sayHello() {
+        System.out.println("myhello");
+        return "myhello";
+    }
 }
