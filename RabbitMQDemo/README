@@ -5,3 +5,6 @@ simpleMQ 为一个测试demo
 emailMQ 为一个发送mail和sms的demo
     1.启动emailMQ的springboot：/Users/yangnk/IdeaProjects/SpringBoot-Learning/RabbitMQDemo/src/main/java/com/yangnk/emailMQ/EmailRobbitMQApplication.java
     2.在postman中项目[emailMQ]调用接口验证；
+
+ HFNQueue 为hfn项目的功能验证。
+    1、主要实现的功能是将前端请求来的试验信息放到RabbitMQ中，并且限流消费；
