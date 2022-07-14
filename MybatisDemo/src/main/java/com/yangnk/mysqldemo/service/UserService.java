@@ -17,7 +17,7 @@ public class UserService {
     UserMapper userMapper;
 
     public void getUserMapper() {
-        User user = userMapper.selectByPrimaryKey(1);
+        User user = userMapper.selectByPrimaryKey(2);
         System.out.println("==========================");
         System.out.println(user.toString());
         System.out.println("==========================");
