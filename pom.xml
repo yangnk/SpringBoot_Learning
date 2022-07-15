@@ -17,6 +17,7 @@
         <module>KafkaDemo</module>
         <module>JpaDemo</module>
         <module>RedisDemo</module>
+        <module>hfn</module>
     </modules>
     <build>
         <plugins>

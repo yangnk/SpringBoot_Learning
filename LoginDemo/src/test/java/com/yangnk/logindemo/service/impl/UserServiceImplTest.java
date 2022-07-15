@@ -1,5 +1,6 @@
 package com.yangnk.logindemo.service.impl;
 
+import com.yangnk.logindemo.MY_TEST.JdbcTest;
 import com.yangnk.logindemo.service.UserService;
 import org.junit.Test;
 import org.junit.Before;
@@ -24,6 +25,15 @@ public class UserServiceImplTest {
 
     @Autowired
     SmsServiceImpl smsService;
+
+    @Autowired
+    JdbcTest jdbcTest;
+
+
+    @Test
+    public void jdbcTest() throws Exception {
+        int count = jdbcTest.getCount();
+    }
 
     @Test
     public void testGetUser() throws Exception {

@@ -1,12 +1,10 @@
-package com.yangnk.logindemo.controller;
+package com.yangnk.hfn.controller;
 
-import com.yangnk.logindemo.common.ResponseEntity;
-import com.yangnk.logindemo.entity.User;
-import com.yangnk.logindemo.pojo.vo.UserVO;
-import com.yangnk.logindemo.service.UserService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
+import com.yangnk.hfn.common.response.ResponseEntity;
+import com.yangnk.hfn.pojo.vo.UserVO;
+import com.yangnk.hfn.service.UserService;
+//import io.swagger.annotations.Api;
+//import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,14 +21,14 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @ResponseBody
 @RequestMapping("/login")
-@Api(value = "登录管理", description = "登录管理API", position = 100, protocols = "http")
+//@Api(value = "登录管理", description = "登录管理API", position = 100, protocols = "http")
 public class UserController {
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserService userService;
 
-    @ApiOperation("/发送动态码")
+//    @ApiOperation("/发送动态码")
     @RequestMapping(value = "/smscode", method = RequestMethod.POST)
     public ResponseEntity sendSmsCode(@RequestHeader(value = "username") String userName, @RequestHeader(value = "telephone") String telephone) {
         userService.sendSmsCode(userName, telephone);
@@ -38,7 +36,7 @@ public class UserController {
         return ResponseEntity.createBySuccessMessage("send sms success");
     }
 
-    @ApiOperation("/注册用户")
+//    @ApiOperation("/注册用户")
     @RequestMapping(value = "/registryUserAccount", method = RequestMethod.PUT)
     public ResponseEntity registryUserAccount(@RequestBody UserVO userVO, @RequestHeader(value = "userSmsCode") String userSmsCode) {
         String smsCode = userService.getSmsCode(userVO.getUserName());
