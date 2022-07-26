@@ -91,7 +91,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.3.18" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.3.18" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.29" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.6.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.6.6" level="project" />
     <orderEntry type="library" name="Maven: com.jayway.jsonpath:json-path:2.6.0" level="project" />
