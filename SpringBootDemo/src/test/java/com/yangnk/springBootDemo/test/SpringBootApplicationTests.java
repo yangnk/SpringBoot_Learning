@@ -1,8 +1,5 @@
 package com.yangnk.springBootDemo.test;
 
-import com.yangnk.SpringDemoApplication;
-import com.yangnk.test.ImportConfig;
-import com.yangnk.test.TestA;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,16 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  **/
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = { ImportConfig.class })
 @SpringBootTest
 public class SpringBootApplicationTests {
-    @Autowired
-    TestA testA;
-
-    @Test
-    public void TestA() {
-        testA.printName();
-    }
-
 
 }

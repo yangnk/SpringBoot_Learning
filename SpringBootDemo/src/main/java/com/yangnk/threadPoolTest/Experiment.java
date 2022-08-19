@@ -1,4 +1,4 @@
-package com.yangnk.ThreadPoolTest;
+package com.yangnk.threadPoolTest;
 
 import lombok.Data;
 
