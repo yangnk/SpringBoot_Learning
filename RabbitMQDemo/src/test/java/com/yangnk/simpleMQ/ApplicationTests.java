@@ -1,6 +1,5 @@
 package com.yangnk.simpleMQ;
 
-import com.yangnk.simpleMQ.Sender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +19,16 @@ public class ApplicationTests {
     @Test
     public void send() throws Exception {
         while (true) {
+            Thread.sleep(3000);
             helloSender.send();
         }
     }
 
-    @Test
-    public void receiver() throws Exception {
-        while (true) {
-            helloReceiver.process("hello");
-        }
-    }
+//    @Test
+//    public void receiver() throws Exception {
+//        while (true) {
+//            Thread.sleep(3000);
+//            helloReceiver.process("hello");
+//        }
+//    }
 }
