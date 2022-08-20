@@ -11,6 +11,7 @@
     <modules>
         <module>HibernateValidatorDemo</module>
         <module>RabbitMQDemo</module>
+        <module>RabbiMQv3</module>
         <module>springBootDemo</module>
         <module>MybatisDemo</module>
         <module>LoginDemo</module>
