@@ -2,12 +2,8 @@ package com.yangnk.rabbimqv3.rabbitMQ;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
-
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -15,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.amqp.SimpleRabbitListenerContainerFactoryConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.retry.policy.SimpleRetryPolicy;
+import org.springframework.retry.support.RetryTemplate;
 
 import java.text.MessageFormat;
 
@@ -101,9 +99,18 @@ public class RabbitMQconfig {
     public SimpleRabbitListenerContainerFactory containerFactory(SimpleRabbitListenerContainerFactoryConfigurer configurer, ConnectionFactory connectionFactory) {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
         // 设置线程数
-        factory.setConcurrentConsumers(10);
+        factory.setConcurrentConsumers(100);
         // 设置最大线程数
-        factory.setMaxConcurrentConsumers(10);
+        factory.setMaxConcurrentConsumers(100);
+        // 设置最大流量
+        factory.setPrefetchCount(100);
+        // 设置确认模式
+        factory.setAcknowledgeMode(AcknowledgeMode.MANUAL);
+        // 设置重试3次的机制
+        RetryTemplate retryTemplate = new RetryTemplate();
+        retryTemplate.setRetryPolicy(new SimpleRetryPolicy(3));
+        factory.setRetryTemplate(retryTemplate);
+
         configurer.configure(factory,connectionFactory);
         return  factory;
     }

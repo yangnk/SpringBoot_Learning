@@ -1,7 +1,6 @@
 package com.yangnk.rabbimqv3.rabbitMQ;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.support.AmqpHeaders;
 import org.springframework.messaging.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -15,9 +14,9 @@ public class ConsumerService {
 
     @RabbitListener(queues = {"queuev3"}, containerFactory = "customContainerFactory")
     public void handler(Message message, Channel channel) throws IOException, InterruptedException {
-        channel.basicQos(1);
+        channel.basicQos(10);
         String string = message.getPayload().toString();
         log.info("==========message.getBody().toString():{}=========",string);
-        channel.basicAck((Long) (message.getHeaders().get(AmqpHeaders.DELIVERY_TAG)), false);
+        channel.basicAck((Long) (message.getHeaders().get(AmqpHeaders.DELIVERY_TAG)), true);
     }
 }
