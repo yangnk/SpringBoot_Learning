@@ -16,30 +16,39 @@ import java.util.Date;
  **/
 @Service
 public class RedisService {
-    @Autowired
-    RedisUtils redisUtils;
+//    @Autowired
+//    RedisUtils redisUtils;
     @Autowired
     JedisPool jedisPool;
 
     void redisInvoke() {
         Jedis jedis = jedisPool.getResource();
+        String lockKey = "lock";
         //循环创建20个线程，只有获得锁的线程才能成功创建
         for (int i = 0; i < 20; i++) {
-            boolean lock = redisUtils.setnxLock(jedis, "lock", "1", 5);
+            boolean lock = RedisUtils.setnxLock(jedis, lockKey, "1", 5);
             while (!lock) {
-                lock = redisUtils.setnxLock(jedis, "lock", "1", 5);
+                lock = RedisUtils.setnxLock(jedis, lockKey, "1", 5);
             }
-            new Thread(new MyTask()).start();
+            new Thread(new MyTask(jedis, lockKey)).start();
         }
-
     }
 }
 
 class MyTask implements Runnable {
+    Jedis jedis;
+    String key;
+
+    public MyTask(Jedis jedis, String key) {
+        this.jedis = jedis;
+        this.key = key;
+    }
+
     @Override
     public void run() {
         System.out.println("===============================");
         System.out.println(Thread.currentThread().getName() + ":" + new Date().toString());
         System.out.println("===============================");
+        RedisUtils.delValue(jedis, key);
     }
 }

@@ -46,12 +46,12 @@ public class LockMethodAspect {
         if (lock == false) {
             throw new RuntimeException("获取锁失败");
         }
-
         try {
             return joinPoint.proceed();
         } catch (Throwable throwable) {
             throw new RuntimeException("系统异常");
         } finally {
+            redisUtils.delValue(jedis, key);
             jedis.close();
         }
     }

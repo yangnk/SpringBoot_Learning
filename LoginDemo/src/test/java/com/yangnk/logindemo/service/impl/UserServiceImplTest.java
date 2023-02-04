@@ -1,10 +1,8 @@
 package com.yangnk.logindemo.service.impl;
 
-import com.yangnk.logindemo.MY_TEST.JdbcTest;
+import com.yangnk.logindemo.myTest.JdbcTest;
 import com.yangnk.logindemo.service.UserService;
 import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

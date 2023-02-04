@@ -22,7 +22,6 @@ public class RedisServiceTest {
     @Test
     public void testRedisInvoke() throws Exception {
         redisService.redisInvoke();
-
     }
 
 

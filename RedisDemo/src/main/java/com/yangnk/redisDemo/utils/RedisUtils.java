@@ -19,7 +19,7 @@ public class RedisUtils {
      * @param key
      * @return
      */
-    public String getValue(Jedis jedis, String key) {
+    public static String getValue(Jedis jedis, String key) {
         String s = jedis.get(key);
         return s;
     }
@@ -32,7 +32,7 @@ public class RedisUtils {
      * @param value
      * @return
      */
-    public boolean setValue(Jedis jedis, String key, String value) {
+    public static boolean setValue(Jedis jedis, String key, String value) {
         try {
             jedis.set(key, value);
         } catch (Exception e) {
@@ -49,7 +49,7 @@ public class RedisUtils {
      * @param key
      * @return
      */
-    public boolean delValue(Jedis jedis, String key) {
+    public static boolean delValue(Jedis jedis, String key) {
         try {
             jedis.del(key);
         } catch (Exception e) {
@@ -61,9 +61,10 @@ public class RedisUtils {
 
 
     /**
-     * 通过setnx+expire实现redis分布式锁
+     * @desc 通过setnx+expire实现redis分布式锁
+     * @return true：加锁成功；false：加锁失败
      */
-    public boolean setnxLock(Jedis jedis, String key, String value, int timeout) {
+    public static boolean setnxLock(Jedis jedis, String key, String value, int timeout) {
         Long flag = jedis.setnx(key, value);
         if (flag == 1) {
             jedis.expire(key, timeout);

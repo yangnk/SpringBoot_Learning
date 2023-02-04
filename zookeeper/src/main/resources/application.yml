@@ -1,0 +1,14 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+zookeeper:
+  curator:
+    ip: 127.0.0.1:2181
+    #ip: 192.168.3.103:2181
+    sessionTimeOut: 50000
+    sleepMsBetweenRetry: 1000
+    maxRetries: 3
+    namespace: demo
+    connectionTimeoutMs: 50000

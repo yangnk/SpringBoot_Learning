@@ -1,6 +1,6 @@
 package com.yangnk.redisDemo.myTest;
 
-import com.yangnk.redisDemo.TEST_MY.MyTestService;
+import com.yangnk.redisDemo.test.MyTestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
