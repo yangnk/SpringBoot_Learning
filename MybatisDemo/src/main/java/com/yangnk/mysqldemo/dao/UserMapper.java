@@ -6,7 +6,6 @@ import com.yangnk.mysqldemo.entity.UserExample;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 
 public interface UserMapper {
     /**
