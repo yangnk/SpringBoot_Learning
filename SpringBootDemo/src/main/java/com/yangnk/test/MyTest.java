@@ -1,24 +1,39 @@
 package com.yangnk.test;
 
-import org.myAbc.MyCall;
-import java.lang.reflect.Method;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-public class MyTest {
-    public static void main(String[] args) {
-        useAppClassLoader();
+import javax.annotation.PostConstruct;
+
+@Component
+public class MyTest{
+
+
+
+    @Value("${testKey}")
+    String string;
+    static String stringStatic;
+
+    @PostConstruct
+    public void init() {
+        stringStatic = string;
     }
 
-    private static void useAppClassLoader() {
-        ClassLoader classLoader = MyTest.class.getClassLoader();
-        System.out.println("MyCall ClassLoader: " + classLoader);
-        try {
-            Class<?> clazz = MyCall.call2("com.yangnk.test.SayHi");
-            SayHi instance = (SayHi) clazz.newInstance();
-            Method method = clazz.getMethod("sayHi");
-            method.invoke(instance);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+//    @Value("${testKey}")
+//    public void setStringStatic(String stringStatic) {
+//        MyTest.stringStatic = stringStatic;
+//    }
+
+
+    public static String getStringStatic() {
+        return stringStatic;
     }
+
+//    @Override
+//    public void afterPropertiesSet(){
+//        stringStatic = string;
+//    }
 }
 

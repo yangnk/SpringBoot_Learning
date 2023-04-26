@@ -19,7 +19,7 @@
         <javaClientGenerator targetPackage="com.yangnk.mysqldemo.dao" targetProject="src/main/java"
                              type="XMLMAPPER"></javaClientGenerator>
 
-        <table tableName="User">
+        <table tableName="user1">
             <property name="modelOnly" value="false"/>
         </table>
 

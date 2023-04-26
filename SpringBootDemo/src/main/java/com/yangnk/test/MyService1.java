@@ -14,4 +14,14 @@ public class MyService1 {
             log.info("111.==========i:{}, currentThreadName:{}===========", i, Thread.currentThread().getName());
         }
     }
+
+    @Async
+    public void mySleep() {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

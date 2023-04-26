@@ -5,6 +5,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.*;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -67,6 +68,11 @@ public class HttpService {
     }
 
     private CloseableHttpClient buildClient(String hostName, Integer port, String schemeName) {
+
+        RequestConfig config = RequestConfig.custom().setConnectTimeout(1).
+                setConnectionRequestTimeout(1).
+                setSocketTimeout(1).build();
+
         CloseableHttpClient httpClient;
         if (!StringUtils.isEmpty(hostName) && port != null) {
             if (StringUtils.isEmpty(schemeName)) {
@@ -75,9 +81,16 @@ public class HttpService {
 
             HttpHost httpHost = new HttpHost(hostName, port, schemeName);
             DefaultProxyRoutePlanner routePlanner = new DefaultProxyRoutePlanner(httpHost);
-            httpClient = HttpClients.custom().setRoutePlanner(routePlanner).build();
+            httpClient = HttpClients.custom()
+                    .setRoutePlanner(routePlanner)
+                    .setDefaultRequestConfig(config)
+                    .build();
         } else {
-            httpClient = HttpClients.createDefault();
+//            httpClient = HttpClients.createDefault();
+            httpClient = HttpClients.custom()
+//                    .setRoutePlanner(routePlanner)
+                    .setDefaultRequestConfig(config)
+                    .build();
         }
 
         return httpClient;
@@ -107,7 +120,8 @@ public class HttpService {
             key = this.processResponse(response);
             return key;
         } catch (Exception var10) {
-            LOGGER.error(var10.getMessage(), var10.toString());
+            LOGGER.info("messege:",var10);
+//            LOGGER.error(var10.getMessage(), var10.toString());
         } finally {
             this.close(client, response);
         }

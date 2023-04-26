@@ -18,8 +18,9 @@ public class MyController {
     @RequestMapping({"/hello"})
     public String sayHello() throws IOException {
         HttpService httpService = new HttpService();
-        String url = "https://portal.ceni.org.cn/auth/getToken";
-        String result = httpService.doPost(url);
+        String url = "https://www.baidu.com";
+//        String url = "http://127.0.0.1:9000/hello1";
+        String result = httpService.doGet(url);
         LOGGER.info("=== sayHello.result ==== " + result);
         return (new Date()).toString() + " ---0130.2.--- " + result;
     }
