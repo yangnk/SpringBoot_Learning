@@ -18,6 +18,23 @@
 	</properties>
 	<dependencies>
 
+        <!--swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <!--swagger-->
 
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -78,7 +95,6 @@
         </dependency>
 
         <!-- redisson -->
-        <!-- 原生，本章使用-->
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>

@@ -2,7 +2,51 @@ package com.yangnk.hfn.utils;
 
 import redis.clients.jedis.Jedis;
 
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
 public class RedisUtil {
+
+    public static Map<String, String> getHsetValue(Jedis jedis, String key) {
+        Map<String, String> map = jedis.hgetAll(key);
+        return map;
+    }
+
+    public static Long rpush(Jedis jedis, String key, String... value) {
+        Long res = jedis.rpush(key, value);
+        return res;
+    }
+
+    public static Long hset(Jedis jedis, String key, Object obj) {
+        HashMap<String, String> map = new HashMap<>();
+        Field[] fields = obj.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            String fieldName = field.getName();
+            String fieldValue = null;
+            try {
+                fieldValue = (String) field.get(obj);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+            map.put(fieldName, fieldValue);
+        }
+        Long res = jedis.hset(key, map);
+        return res;
+    }
+
+    public static List<String> getListValue(Jedis jedis, String key) {
+        List<String> res = jedis.lrange(key, 0, -1);
+        return res;
+    }
+
+    public static Long lpop(Jedis jedis, String key) {
+        Long del = jedis.del(key);
+        return del;
+    }
 
     /**
      * 获取redis中的值

@@ -6,10 +6,12 @@
     <context id="MySql" defaultModelType="flat">
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <jdbcConnection
-                driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/hfn_db"
+                driverClass="com.mysql.cj.jdbc.Driver"
+                connectionURL="jdbc:mysql://42.192.46.163:3306/hfn_db?serverTimezone=UTC&amp;useSSL=false&amp;allowPublicKeyRetrieval=true"
                 userId="root"
                 password="666666"/>
+
+
 
         <javaModelGenerator targetPackage="com.yangnk.hfn.entity"
                             targetProject="src/main/java"></javaModelGenerator>
@@ -19,7 +21,7 @@
         <javaClientGenerator targetPackage="com.yangnk.hfn.dao" targetProject="src/main/java"
                              type="XMLMAPPER"></javaClientGenerator>
 
-        <table tableName="user_tbl">
+        <table tableName="image">
             <property name="modelOnly" value="false"/>
         </table>
 
