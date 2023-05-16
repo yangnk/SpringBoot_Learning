@@ -13,8 +13,6 @@ public class ApplicationTests {
     @Autowired
     private Sender helloSender;
 
-    @Autowired
-    private Receiver helloReceiver;
 
     @Test
     public void send() throws Exception {

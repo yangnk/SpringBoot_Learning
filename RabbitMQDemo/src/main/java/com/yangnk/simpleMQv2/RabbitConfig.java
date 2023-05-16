@@ -68,7 +68,7 @@ public class RabbitConfig {
 
     @Bean
     DirectExchange myExchange() {
-        return new DirectExchange("exchanngev2", true, false);
+        return new DirectExchange("exchangev2", true, false);
     }
 
     @Bean

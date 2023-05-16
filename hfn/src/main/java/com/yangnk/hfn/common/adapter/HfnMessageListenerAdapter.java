@@ -41,7 +41,8 @@ public class HfnMessageListenerAdapter extends MessageListenerAdapter {
                     log.info("=================ack success================");
                     return;
                 }
-                channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
+                //如果失败，则放入队列中重试
+                channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, true);
                 log.info("=================ack false================");
             }
             throw new Exception();
