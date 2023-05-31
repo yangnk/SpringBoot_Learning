@@ -1,4 +1,4 @@
-package com.yangnk.redisDemo.service;
+package com.yangnk.redisDemo.service.impl;
 
 import com.yangnk.redisDemo.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,19 @@ public class RedisService {
     @Autowired
     JedisPool jedisPool;
 
-    void redisInvoke() {
+
+    /**
+     * 从redis中根据key获取value
+     * @param key
+     * @return
+     */
+    public String getValueByKey(String key) {
+        Jedis jedis = jedisPool.getResource();
+        String s = jedis.get(key);
+        return s;
+    }
+
+    public void redisInvoke() {
         Jedis jedis = jedisPool.getResource();
         String lockKey = "lock";
         //循环创建20个线程，只有获得锁的线程才能成功创建

@@ -1,6 +1,6 @@
-package com.yangnk.redisDemo.service;
+package com.yangnk.redisDemo.service.impl;
 
-import com.yangnk.redisDemo.dao.NetworkMapper;
+import com.yangnk.redisDemo.mapper.NetworkMapper;
 import com.yangnk.redisDemo.entity.Network;
 import com.yangnk.redisDemo.utils.RedisUtils;
 import lombok.extern.slf4j.Slf4j;

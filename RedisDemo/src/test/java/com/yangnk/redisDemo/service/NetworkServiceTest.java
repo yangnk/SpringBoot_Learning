@@ -1,9 +1,8 @@
 package com.yangnk.redisDemo.service;
 
 import com.yangnk.redisDemo.entity.Network;
+import com.yangnk.redisDemo.service.impl.NetworkService;
 import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

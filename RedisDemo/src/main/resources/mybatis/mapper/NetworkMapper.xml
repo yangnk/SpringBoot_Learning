@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yangnk.redisDemo.dao.NetworkMapper">
+<mapper namespace="com.yangnk.redisDemo.mapper.NetworkMapper">
     <resultMap id="BaseResultMap" type="com.yangnk.redisDemo.entity.Network">
         <!--
           WARNING - @mbggenerated

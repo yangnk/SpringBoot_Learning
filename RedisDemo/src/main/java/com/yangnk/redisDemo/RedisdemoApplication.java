@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.yangnk.redisDemo.dao")
+@MapperScan("com.yangnk.redisDemo.mapper")
 public class RedisdemoApplication {
 
     public static void main(String[] args) {

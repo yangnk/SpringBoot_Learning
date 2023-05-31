@@ -7,19 +7,24 @@
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <jdbcConnection
                 driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/test_db"
+                connectionURL="jdbc:mysql://42.192.46.163:3306/test_db"
                 userId="root"
                 password="666666"/>
 
         <javaModelGenerator targetPackage="com.yangnk.redisDemo.entity"
                             targetProject="src/main/java"></javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mybatis.mapper" targetProject="src/main/resources"></sqlMapGenerator>
+        <sqlMapGenerator targetPackage="mybatis.mapper"
+                         targetProject="src/main/resources"></sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.yangnk.redisDemo.dao" targetProject="src/main/java"
-                             type="XMLMAPPER"></javaClientGenerator>
+        <javaClientGenerator targetPackage="com.yangnk.redisDemo.mapper"
+                             targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
 
-        <table tableName="network">
+<!--        <table tableName="network">-->
+<!--            <property name="modelOnly" value="false"/>-->
+<!--        </table>-->
+
+        <table tableName="user">
             <property name="modelOnly" value="false"/>
         </table>
 

@@ -1,4 +1,4 @@
-package com.yangnk.redisDemo.dao;
+package com.yangnk.redisDemo.mapper;
 
 import com.yangnk.redisDemo.entity.Network;
 import com.yangnk.redisDemo.entity.NetworkExample;
