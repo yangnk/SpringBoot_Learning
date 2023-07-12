@@ -1,4 +1,4 @@
-package com.yangnk.hfn.MY_TEST;
+package com.yangnk.hfn.myTest;
 
 import lombok.SneakyThrows;
 
