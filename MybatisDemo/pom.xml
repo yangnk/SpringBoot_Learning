@@ -122,7 +122,7 @@
     <build>
         <plugins>
 
-            <!--mybatis generator-->
+            <!--mybatis generator start-->
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
@@ -141,7 +141,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            <!--mybatis generator-->
+            <!--mybatis generator end-->
 
 
             <plugin>

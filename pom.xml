@@ -12,8 +12,6 @@
         <module>MybatisPlusDemo</module>
         <module>HibernateValidatorDemo</module>
         <module>RabbitMQDemo</module>
-<!--        <module>RabbiMQv3</module>-->
-        <module>springBootDemo</module>
         <module>MybatisDemo</module>
         <module>LoginDemo</module>
         <module>KafkaDemo</module>
