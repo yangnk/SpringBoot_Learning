@@ -7,6 +7,8 @@ import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import java.util.Date;
 
+import static com.yangnk.grpcapi.api.SimpleGrpc.getSayHelloMethod;
+
 @GrpcService
 public class GrpcServerService extends SimpleGrpc.SimpleImplBase {
 

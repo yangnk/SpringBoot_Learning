@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.yangnk.grpcapi.dialoutApi";
+option java_outer_classname = "dialoutProto";
+
+// The greeting service definition.
+service dialoutService {
+    // Sends a greeting
+    rpc simpleDialout (dialoutRequest) returns (dialoutResponse) {
+    }
+}
+
+// The request message containing the user's name.
+message dialoutRequest {
+    string deviceMsg = 1;
+    string sensorPath = 2;
+    string jsonData = 3;
+    
+}
+
+// The response message containing the greetings
+message dialoutResponse {
+    string message = 1;
+}
