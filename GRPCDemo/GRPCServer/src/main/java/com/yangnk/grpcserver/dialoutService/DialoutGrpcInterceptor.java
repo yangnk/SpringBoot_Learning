@@ -2,7 +2,6 @@ package com.yangnk.grpcserver.dialoutService;
 
 import io.grpc.*;
 import lombok.extern.slf4j.Slf4j;
-import net.devh.boot.grpc.server.service.GrpcService;
 import org.apache.commons.lang.StringUtils;
 //import org.springframework.util.StringUtils;
 
@@ -23,7 +22,7 @@ public class DialoutGrpcInterceptor implements ServerInterceptor {
             public void onComplete() {
                 //记录请求参数及耗时
                 System.out.println("process cost: " + (System.nanoTime() - startTime));
-                System.out.println("process param: " + request.toString());
+//                System.out.println("process param: " + request.toString());
                 super.onComplete();
             }
 

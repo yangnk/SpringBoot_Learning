@@ -14,4 +14,9 @@ public class GlobalClientInterceptorConfiguration {
     ClientInterceptor logClientInterceptor() {
         return new LogGrpcInterceptor();
     }
+
+    @GrpcGlobalClientInterceptor
+    ClientInterceptor myClientInterceptor() {
+        return new MyClientGrpcInterceptor();
+    }
 }
