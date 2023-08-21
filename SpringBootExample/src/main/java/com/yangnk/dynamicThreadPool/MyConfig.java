@@ -8,11 +8,11 @@ import java.util.concurrent.*;
 public class MyConfig {
     @Bean
     ThreadPoolExecutor getExecutor() {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(50,
-                500,
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(10,
+                10,
                 10,
                 TimeUnit.SECONDS,
-                new ArrayBlockingQueue<>(100000));
+                new ArrayBlockingQueue<>(10000));
         executor.prestartCoreThread();
         return executor;
     }

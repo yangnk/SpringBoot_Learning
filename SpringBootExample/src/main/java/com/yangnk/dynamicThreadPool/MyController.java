@@ -20,6 +20,12 @@ public class MyController {
         return new Date().toString();
     }
 
+    @RequestMapping(value = "changeSize", method = RequestMethod.GET)
+    String changeSize(@RequestParam int size) {
+        myService.changeSize(size);
+        return new Date().toString();
+    }
+
     @RequestMapping(value = "noVmExeperiment", method = RequestMethod.GET)
     String noVmExeperiment(@RequestParam int size) {
         myService.noVmExeperiment(size);
