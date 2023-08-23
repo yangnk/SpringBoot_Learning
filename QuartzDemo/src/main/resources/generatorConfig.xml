@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MySql" defaultModelType="flat">
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+
+<!--        <jdbcConnection-->
+<!--                driverClass="com.mysql.cj.jdbc.Driver"-->
+<!--                connectionURL="jdbc:mysql://42.192.46.163:3306/quartz?serverTimezone=UTC&amp;useSSL=false&amp;allowPublicKeyRetrieval=true"-->
+<!--                userId="root"-->
+<!--                password="777777"/>-->
+
+
+        <!-- jdbc连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://x:3306/quartz?useUnicode=true&amp;characterEncoding=UTF-8"
+                        userId="root"
+                        password="x"/>
+
+
+
+        <javaModelGenerator targetPackage="com.example.quartzdemo.model"
+                            targetProject="src/main/java"></javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="src/main/resources"></sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.example.quartzdemo.mapper"
+                             targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
+
+<!--        <table tableName="qrtz_blob_triggers">-->
+<!--            <property name="modelOnly" value="false"/>-->
+<!--        </table>-->
+
+        <table tableName="qrtz_calendars">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_cron_triggers">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_fired_triggers">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_job_details">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_locks">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_paused_trigger_grps">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_scheduler_state">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_simple_triggers">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_simprop_triggers">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="qrtz_triggers">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="t_schedule_trigger">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+        <table tableName="t_schedule_trigger_param">
+            <property name="modelOnly" value="false"/>
+        </table>
+
+
+
+    </context>
+
+</generatorConfiguration>
